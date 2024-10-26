@@ -726,16 +726,29 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .reservation-title {
+        font-size: 1em;
+        padding: 5px;
+        text-align: center; /* Center-aligns the title for better aesthetics */
+    }
+    
     .reservation-container {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column; /* Stack image and info vertically */
+        align-items: center; /* Center-align items horizontally */
+        padding: 15px;
+        margin: 10px auto; /* Centers the container and adds margin */
+        text-align: center; /* Center-aligns text inside the container */
     }
 
     .reservation-image {
-        width: 400px;
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 15px;
+        border-radius: 10px; /* Optional: adds rounded corners to the image */
     }
 
     .reservation-info {
-        text-align: left;
-        padding: 30px;
+        font-size: 1em; /* Adjust font size for better readability on small screens */
     }
 }
