@@ -659,6 +659,7 @@ footer {
 }
 
 /* Container da secção de reservas */
+/* Container da secção de reservas */
 .reservation {
     display: flex;
     justify-content: center;
@@ -675,13 +676,13 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 1000px; /* Aumentado para um tamanho maior */
+    max-width: 800px;
     width: 100%;
 }
 
 /* Imagem da casa */
-.reservation-image {
-    width: 500px; /* Aumentado para uma largura maior */
+.house-photo {
+    width: 300px;
     height: auto;
     object-fit: cover;
 }
@@ -689,7 +690,6 @@ footer {
 /* Informações da reserva */
 .reservation-info {
     display: flex;
-    font-size: larger;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
@@ -697,7 +697,11 @@ footer {
     flex: 1;
 }
 
-/* Título da secção de reservas */
+/* Estilo para as informações superiores (Reserva e Detalhes) */
+.reservation-top {
+    margin-bottom: 20px;
+}
+
 .reservation-title {
     text-align: center;
     margin: 0;
@@ -708,47 +712,38 @@ footer {
     color: #333;
 }
 
-/* Estilo para o botão de reserva */
-.booking-button {
-    font-size: medium;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-top: 10px; /* Espaço acima do botão */
+.reservation-top p {
+    margin: 1em;
+    font-size: 1.2em;
 }
 
-.booking-button:hover {
-    background-color: #202320;
-}
-
+/* Responsive Styles for Reservation Section */
 @media (max-width: 768px) {
-    .reservation-title {
-        font-size: 1em;
-        padding: 5px;
-        text-align: center; /* Center-aligns the title for better aesthetics */
+    .reservation {
+        padding: 15px;
     }
-    
+
     .reservation-container {
         display: flex;
-        flex-direction: column; /* Stack image and info vertically */
-        align-items: center; /* Center-align items horizontally */
+        flex-direction: column;
+        align-items: center;
         padding: 15px;
-        margin: 10px auto; /* Centers the container and adds margin */
-        text-align: center; /* Center-aligns text inside the container */
+        margin: 10px auto;
+        text-align: center;
     }
 
-    .reservation-image {
+    .house-photo {
         width: 80%;
         max-width: 250px;
         margin-bottom: 15px;
-        border-radius: 10px; /* Optional: adds rounded corners to the image */
+        border-radius: 10px;
     }
 
     .reservation-info {
-        font-size: 1em; /* Adjust font size for better readability on small screens */
+        font-size: 1em;
+    }
+
+    .reservation-top p {
+        margin: 5px 0;
     }
 }
