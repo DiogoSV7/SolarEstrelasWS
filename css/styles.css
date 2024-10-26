@@ -724,3 +724,18 @@ footer {
 .booking-button:hover {
     background-color: #202320;
 }
+
+@media (min-width: 600px) {
+    .reservation-container {
+        flex-direction: row;
+    }
+
+    .reservation-image {
+        width: 400px;
+    }
+
+    .reservation-info {
+        text-align: left;
+        padding: 30px;
+    }
+}
