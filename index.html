@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+NL:wght@100..400&display=swap');
+    </style>        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Solar das Estrelas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js'></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../docs/logo.png" alt="Logotipo Solar das Estrelas" class="logo-img">
+                <h1>Solar das Estrelas</h1>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="contact.html">Contactos</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slides">
+            <div class="slide" style="background-image: url('../docs/entrada.png');"></div>
+            <div class="slide" style="background-image: url('../docs/piscina.png');"></div>
+            <div class="slide" style="background-image: url('../docs/piscina2.png');"></div>
+            <div class="slide" style="background-image: url('../docs/quarto1.png');"></div>
+            <div class="slide" style="background-image: url('../docs/quarto2.png');"></div>
+        </div>
+        <div class="hero-content">
+            <h2>Bem-vindo ao Solar das Estrelas</h2>
+            <p>Experimente o luxo e o conforto no coração da natureza. Alugue a escapada perfeita para a sua família.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <h3>Principais Características</h3>
+        <ul>
+            <li><i class="fas fa-swimming-pool"></i> Piscina exterior</li>
+            <li><i class="fas fa-parking"></i> Estacionamento gratuito</li>
+            <li><i class="fas fa-wifi"></i> Acesso Wi-Fi gratuito</li>
+            <li><i class="fas fa-smoking-ban"></i> Quartos para não fumadores</li>
+            <li><i class="fas fa-snowflake"></i> Ar condicionado</li>
+            <li><i class="fas fa-bed"></i> 2 Quartos</li>
+            <li><i class="fas fa-bath"></i> 1 Casa de Banho</li>
+            <li><i class="fas fa-tree"></i> Jardim</li>
+        </ul>
+    </section>
+
+    <section class="location">
+        <h2>Localização</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.252664332851!2d-8.67372618412284!3d39.62435837963154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1a3b2730a927b3%3A0x2874e2e7f4f1e31!2sEstrada%20de%20F%C3%A1tima%2068%20(144)%2C%202490-053%20F%C3%A1tima%2C%20Portugal!5e0!3m2!1sen!2spt!4v1695773948252!5m2!1sen!2spt"
+                style="border:0; width: 100%; height: 400px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <section class="nearby">
+    <h2>Nas Proximidades</h2>
+    <div class="nearby-container">
+        <div class="nearby-card">
+            <img src="../docs/santuario_fatima.png" alt="Santuário de Fátima">
+            <div class="nearby-card-content">
+                <h3>Santuário de Fátima</h3>
+                <p>6.4 km | 10 min de carro</p>
+            </div>
+        </div>
+        <div class="nearby-card">
+            <img src="../docs/parque_infantil.jpg" alt="Parque Infantil">
+            <div class="nearby-card-content">
+                <h3>Parque Infantil</h3>
+                <p>3,5 km | 7 min de carro</p>
+            </div>
+        </div>
+        <div class="nearby-card">
+            <img src="../docs/mata_municipal.jpg" alt="Mata Municipal de Ourém">
+            <div class="nearby-card-content">
+                <h3>Mata Municipal de Ourém</h3>
+                <p>4,4 km | 9 min de carro</p>
+            </div>
+        </div>
+        <div class="nearby-card">
+            <img src="../docs/parque_ourem.jpg" alt="Parque Infantil de Ourém">
+            <div class="nearby-card-content">
+                <h3>Parque Infantil de Ourém</h3>
+                <p>4,4 km | 9 min de carro</p>
+            </div>
+        </div>
+
+        <!-- Museu de Cera de Fátima -->
+        <div class="nearby-card">
+            <img src="../docs/museu_cera.jpg" alt="Museu de Cera de Fátima">
+            <div class="nearby-card-content">
+                <h3>Museu de Cera de Fátima</h3>
+                <p>4,5 km | 9 min de carro</p>
+            </div>
+        </div>
+
+        <!-- Serras d'Aire e Candeeiros -->
+        <div class="nearby-card">
+            <img src="../docs/serra_daire.jpg" alt="Serras d'Aire e Candeeiros">
+            <div class="nearby-card-content">
+                <h3>Serras d'Aire e Candeeiros</h3>
+                <p>14 km | 20 min de carro</p>
+            </div>
+        </div>
+
+        <!-- Parque de Lazer -->
+        <div class="nearby-card">
+            <img src="../docs/parque_lazer.jpg" alt="Parque de Lazer">
+            <div class="nearby-card-content">
+                <h3>Parque de Lazer</h3>
+                <p>15 km | 20 min de carro</p>
+            </div>
+        </div>
+
+
+        <!-- Parque Natural das Serras de Aire e Candeeiros -->
+        <div class="nearby-card">
+            <img src="../docs/parque_natural.jpg" alt="Parque Natural das Serras de Aire e Candeeiros">
+            <div class="nearby-card-content">
+                <h3>Parque Natural das Serras de Aire e Candeeiros</h3>
+                <p>17 km | 23 min de carro</p>
+            </div>
+        </div>
+
+        <!-- Restaurante O Curral -->
+        <div class="nearby-card">
+            <img src="../docs/o_curral.jpg" alt="Restaurante O Curral">
+            <div class="nearby-card-content">
+                <h3>O Curral</h3>
+                <p>1,4 km | 3 min de carro</p>
+            </div>
+        </div>
+        
+        <!-- Café/Bar Café o Ferrador
+        <div class="nearby-card">
+            <img src="path/to/cafe-ferrador.jpg" alt="Café o Ferrador">
+            <div class="nearby-card-content">
+                <h3>Café o Ferrador</h3>
+                <p>650 m | 1 min de carro</p>
+            </div>
+        </div>
+
+         Café/Bar Bar da Ponte 
+        <div class="nearby-card">
+            <img src="path/to/cafe-bar-ponte.jpg" alt="Bar da Ponte">
+            <div class="nearby-card-content">
+                <h3>Bar da Ponte</h3>
+                <p>700 m | 9 min de carro</p>
+            </div>
+        </div>
+        -->
+    </div>
+</section>
+                  
+    <footer>
+        <p>&copy; 2024 Solar das Estrelas. Todos os direitos reservados.</p>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js'></script>
+    <script src="../javascript/scripts.js"></script>
+</body>
+</html>

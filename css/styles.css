@@ -1,0 +1,999 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, hsl(30, 92%, 20%), #e0ac30);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: "Playwrite NL", serif;
+    font-size: small;
+    transition: background 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 0.2em;
+    font-family: "Playwrite NL", serif;
+}
+
+/* Menu Toggle (Checkbox) */
+.menu-toggle {
+    display: none;
+}
+
+/* Menu Icon (Label) */
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1em;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 20px; /* Adjusted margin to push the icon to the left */
+        position: relative;
+        right: 20px;
+    }
+
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        width: 250px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    font-family: "Times New Roman", serif;
+    width: 100%;
+    height: 450px; /* Set height for the hero section */
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 90%;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Animation for the slides */
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.hero-slides .slide:nth-child(1) {
+    animation: fade 15s infinite;
+}
+
+.hero-slides .slide:nth-child(2) {
+    animation: fade 15s infinite 5s;
+}
+
+.hero-slides .slide:nth-child(3) {
+    animation: fade 15s infinite 10s;
+}
+
+.hero-slides .slide:nth-child(4) {
+    animation: fade 15s infinite 15s;
+}
+
+.hero-slides .slide:nth-child(5) {
+    animation: fade 15s infinite 20s;
+}
+
+.features {
+    background-color: #f9f9f9;
+    font-family: "Times New Roman", Times, serif;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.features ul li {
+    font-size: 1.3em;
+    margin: 10px 0;
+    color: #555;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.features ul li i {
+    color: rgb(22, 113, 153);
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.features h3 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.features ul li::before {
+    content: "";
+    margin-right: 10px;
+}
+
+.about, .rules, .location {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about, .rules {
+    background-color: #f4f4f4;
+}
+
+.rules {
+    background-color: #eaeaea;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.about h2, .rules h2, .location h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about p, .rules p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    color: #555;
+}
+
+.rules-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: separate; /* Separate borders for better styling */
+    border-spacing: 0; /* Remove default spacing */
+    font-size: 1.1em;
+    background-color: #fff; /* White background for better readability */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensure corners are rounded on all sides */
+}
+
+.rules-table th, .rules-table td {
+    padding: 15px; /* Increase padding for better readability */
+    text-align: left;
+    vertical-align: top;
+}
+
+.rules-table th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    color: #333; /* Darker text color for headers */
+    border-bottom: 2px solid #ddd; /* Subtle border under header */
+    font-weight: bold;
+}
+
+.rules-table td {
+    background-color: #fff; /* White background for table cells */
+    color: #555; /* Darker text color for better contrast */
+    border-bottom: 2px solid #ddd; /* Subtle border between rows */
+}
+
+.rules-table i {
+    margin-right: 10px;
+    color: #007BFF; /* Blue color for icons */
+}
+
+/* Hover Effect */
+.rules-table tr:hover td {
+    background-color: #f9f9f9; /* Light gray background on row hover */
+}
+
+.rules-table td:last-child {
+    border-bottom: none; /* Remove border from last cell in each row */
+}
+
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Individual Image Links */
+.gallery-container a {
+    display: block;
+    position: relative;
+    width: 300px; /* Set a fixed width for consistency */
+    height: 200px; /* Set a fixed height for consistency */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling */
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the entire area */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.gallery-container a:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.gallery-container a:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.location {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.location h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Map Container */
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container a {
+        width: 90%;
+        height: auto;
+        max-width: 600px; /* Adjust width for smaller screens */
+    }
+}
+
+
+/* Container da secção de contacto */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+}
+
+/* Contêiner principal com imagem e informações */
+.owner-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Imagem da proprietária */
+.owner-photo {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Informações do proprietário */
+.owner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    color: #333;
+    flex: 1;
+}
+
+/* Estilo para as informações superiores (Proprietária e Telemóvel) */
+.contact-top {
+    margin-bottom: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    margin:0;
+}
+
+.contact-title h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.contact-top p {
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, hsl(30, 92%, 20%), #e0ac30); /* Gradient background */    color: #fff;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: "Times New Roman", serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1em;
+        padding: 5px;
+        text-align: center; /* Center-aligns the title for better aesthetics */
+    }
+
+
+    .contact {
+        padding: 15px;
+    }
+
+    .owner-container {
+        display: flex;
+        flex-direction: column; /* Stack image and info vertically */
+        align-items: center; /* Center-align items horizontally */
+        padding: 15px;
+        margin: 10px auto; /* Centers the container and adds margin */
+        text-align: center; /* Center-aligns text inside the container */
+    }
+
+    .owner-photo {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 15px;
+        border-radius: 10px; /* Optional: adds rounded corners to the image */
+    }
+
+    .owner-info {
+        font-size: 1em; /* Adjust font size for better readability on small screens */
+    }
+
+    .contact-top p {
+        margin: 5px 0; /* Adjust margins between text elements */
+    }
+}
+
+.floating-button {
+    font-family: "Times New Roman", serif;
+    position: fixed;
+    bottom: 50px; /* Distance from the bottom */
+    right: 50px; /* Distance from the right */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    padding: 15px 25px; /* Padding for the button */
+    border-radius: 15px; /* Rounded corners for a circular button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    z-index: 1000; /* Ensure it is above other content */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#user-profile {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Profile Info */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+.profile-details h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Edit Profile Form */
+#edit-profile-form {
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#edit-profile-form label {
+    font-family: "Times New Roman", Times, serif;
+
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#edit-profile-form input[type="text"],
+#edit-profile-form input[type="email"],
+#edit-profile-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+#edit-profile-form button, form[action="../actions/action_logout.php"] button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#edit-profile-form button:hover {
+    background-color: #555;
+}
+
+/* Logout Button */
+form[action="../actions/action_logout.php"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+form[action="../actions/action_logout.php"] button:hover {
+    background-color: #555;
+}
+
+/* Error/Success Messages */
+#user-profile p {
+    font-size: 1em;
+    color: #333;
+}
+
+#user-profile p.success {
+    color: #5cb85c; /* Success color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #user-profile {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    #edit-profile-form input[type="text"],
+    #edit-profile-form input[type="email"],
+    #edit-profile-form input[type="password"] {
+        width: calc(100% - 10px);
+        font-size: 1em;
+    }
+
+    #edit-profile-form button,
+    form[action="../actions/action_logout.php"] button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Form Sections */
+#login,
+#register {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#login h2,
+#register h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#login form,
+#register form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login form label,
+#register form label {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #555;
+}
+
+#login form input[type="text"],
+#login form input[type="password"],
+#register form input[type="text"],
+#register form input[type="email"],
+#register form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+#login form button,
+#register form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#login form button:hover,
+#register form button:hover {
+    background-color: #555;
+}
+
+/* Error Message */
+#login p,
+#register p {
+    color: #d9534f; /* Error color */
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #login,
+    #register {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    #login h2,
+    #register h2 {
+        font-size: 2em;
+    }
+
+    #login form button,
+    #register form button {
+        font-size: 1em;
+    }
+}
+
+/* Nearby Section */
+.nearby {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 1200px;
+    margin: 3em auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.nearby h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Nearby Places Container */
+.nearby-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.nearby-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nearby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nearby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.nearby-card-content {
+    padding: 15px;
+}
+
+.nearby-card-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.nearby-card-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive Styles for Nearby Section */
+@media (max-width: 768px) {
+    .nearby-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nearby-card img {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Container da secção de reservas */
+.reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+}
+
+/* Contêiner principal com imagem e informações */
+.reservation-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px; /* Aumentado para um tamanho maior */
+    width: 100%;
+}
+
+/* Imagem da casa */
+.reservation-image {
+    width: 500px; /* Aumentado para uma largura maior */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Informações da reserva */
+.reservation-info {
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    color: #333;
+    flex: 1;
+}
+
+/* Título da secção de reservas */
+.reservation-title {
+    text-align: center;
+    margin: 0;
+}
+
+.reservation-title h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+/* Estilo para o botão de reserva */
+.booking-button {
+    font-size: medium;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+.booking-button:hover {
+    background-color: #202320;
+}
