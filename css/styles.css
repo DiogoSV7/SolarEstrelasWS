@@ -1,10 +1,16 @@
 /* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    overflow-x: hidden; /* Temporary fix */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -12,14 +18,13 @@ header {
     background: linear-gradient(135deg, hsl(30, 92%, 20%), #e0ac30);
     padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
     font-family: "Playwrite NL", serif;
     font-size: small;
     transition: background 0.3s ease;
+    box-sizing: border-box;
 }
 
 nav {
@@ -81,8 +86,8 @@ h1 {
 
 /* Navigation Links */
 .nav-links {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
     padding: 0;
     margin: 0;
     align-items: center;
@@ -388,6 +393,7 @@ h1 {
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
 }
 
@@ -456,8 +462,9 @@ h1 {
     }
 
     .gallery-container a {
-        width: 100%;
+        width: 90%;
         height: auto;
+        max-width: 600px; /* Adjust width for smaller screens */
     }
 }
 
@@ -473,20 +480,21 @@ h1 {
 }
 
 /* Contêiner principal com imagem e informações */
-.owner-photo {
-    width: 100%; /* Use 100% width */
-    max-width: 300px; /* Set max-width for larger screens */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Adjust .owner-container for responsiveness */
 .owner-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center align items */
-    padding: 15px;
-    margin: 10px auto; /* Center container and add margin */
-    text-align: center; /* Center text */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Imagem da proprietária */
+.owner-photo {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Informações do proprietário */
@@ -536,6 +544,7 @@ h2 {
 @media (max-width: 768px) {
     .contact-title {
         font-size: 1em;
+        padding: 5px;
         text-align: center; /* Center-aligns the title for better aesthetics */
     }
 
@@ -546,14 +555,15 @@ h2 {
 
     .owner-container {
         display: flex;
-        width: 100%;
         flex-direction: column; /* Stack image and info vertically */
         align-items: center; /* Center-align items horizontally */
+        padding: 15px;
+        margin: 10px auto; /* Centers the container and adds margin */
         text-align: center; /* Center-aligns text inside the container */
     }
 
     .owner-photo {
-        width: 100%;
+        width: 80%;
         max-width: 250px;
         margin-bottom: 15px;
         border-radius: 10px; /* Optional: adds rounded corners to the image */
@@ -721,59 +731,11 @@ footer {
     background-color: #202320;
 }
 
-/* Container da secção de reservas */
-.reservation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f4f4f4;
-}
-
-/* Contêiner principal com imagem e informações */
-.reservation-container {
-    display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 800px;
-    width: 100%;
-}
-
-/* Imagem da casa */
-.reservation-image {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Informações de reserva */
-.reservation-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
-    color: #333;
-    flex: 1;
-}
-
-.reservation-info h2 {
-    font-size: 2.2em;
-    color: #333;
-}
-
-.reservation-info p {
-    margin: 1em 0;
-    font-size: 1.2em;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
    
 
     .reservation-container {
+
         flex-direction: column; /* Stack image and info vertically */
         align-items: center;
         width:100%;
@@ -783,6 +745,7 @@ footer {
 
     .reservation-image {
         width: 100%;
+        margin-top: 10px;
         max-width: 250px;
         margin-bottom: 15px;
         border-radius: 10px;
