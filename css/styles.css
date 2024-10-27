@@ -457,9 +457,8 @@ h1 {
     }
 
     .gallery-container a {
-        width: 90%;
+        width: 100%;
         height: auto;
-        max-width: 600px; /* Adjust width for smaller screens */
     }
 }
 
@@ -549,6 +548,7 @@ h2 {
 
     .owner-container {
         display: flex;
+        width: 100%;
         flex-direction: column; /* Stack image and info vertically */
         align-items: center; /* Center-align items horizontally */
         padding: 15px;
@@ -557,7 +557,7 @@ h2 {
     }
 
     .owner-photo {
-        width: 80%;
+        width: 100%;
         max-width: 250px;
         margin-bottom: 15px;
         border-radius: 10px; /* Optional: adds rounded corners to the image */
@@ -783,12 +783,13 @@ footer {
         flex-direction: column; /* Stack image and info vertically */
         align-items: center;
         padding: 15px;
+        width:100%;
         margin: 10px auto;
         text-align: center;
     }
 
     .reservation-image {
-        width: 80%;
+        width: 100%;
         max-width: 250px;
         margin-bottom: 15px;
         border-radius: 10px;
