@@ -388,7 +388,6 @@ h1 {
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     justify-content: center;
 }
 
@@ -537,7 +536,6 @@ h2 {
 @media (max-width: 768px) {
     .contact-title {
         font-size: 1em;
-        padding: 5px;
         text-align: center; /* Center-aligns the title for better aesthetics */
     }
 
@@ -551,8 +549,6 @@ h2 {
         width: 100%;
         flex-direction: column; /* Stack image and info vertically */
         align-items: center; /* Center-align items horizontally */
-        padding: 15px;
-        margin: 10px auto; /* Centers the container and adds margin */
         text-align: center; /* Center-aligns text inside the container */
     }
 
@@ -775,14 +771,11 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .reservation {
-        padding: 15px;
-    }
+   
 
     .reservation-container {
         flex-direction: column; /* Stack image and info vertically */
         align-items: center;
-        padding: 15px;
         width:100%;
         margin: 10px auto;
         text-align: center;
